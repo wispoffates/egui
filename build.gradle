@@ -1,5 +1,4 @@
 apply plugin: "kotlin"
-apply plugin: "com.github.johnrengelman.shadow"
 
 group 'me.elsiff'
 version '1.0.0-SNAPSHOT'
