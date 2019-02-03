@@ -13,7 +13,9 @@ class StandardClickHandler : InventoryActionHandler {
     override val handlingActions: Set<InventoryAction> = setOf(
         InventoryAction.CLONE_STACK,
         InventoryAction.DROP_ALL_CURSOR,
+        InventoryAction.DROP_ALL_SLOT,
         InventoryAction.DROP_ONE_CURSOR,
+        InventoryAction.DROP_ONE_SLOT,
         InventoryAction.PICKUP_ALL,
         InventoryAction.PICKUP_HALF,
         InventoryAction.PICKUP_ONE,

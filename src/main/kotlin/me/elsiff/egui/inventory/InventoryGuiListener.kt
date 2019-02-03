@@ -66,8 +66,7 @@ class InventoryGuiListener(
             CollectToCursorHandler(),
             HotbarSwapHandler(),
             MoveToOtherInvHandler(),
-            StandardClickHandler(),
-            DropSlotHandler()
+            StandardClickHandler()
         )
     }
 }
