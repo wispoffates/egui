@@ -20,7 +20,8 @@ class StandardClickHandler : InventoryActionHandler {
         InventoryAction.PICKUP_SOME,
         InventoryAction.PLACE_ALL,
         InventoryAction.PLACE_ONE,
-        InventoryAction.PLACE_SOME
+        InventoryAction.PLACE_SOME,
+        InventoryAction.SWAP_WITH_CURSOR
     )
 
     override fun handle(event: InventoryClickEvent, gui: InventoryGui) {
