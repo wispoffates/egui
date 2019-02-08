@@ -39,6 +39,6 @@ class ContainerGui(
     }
 
     override fun handleDrag(state: GuiDragState) {
-        //TODO send debug message to the player
+        state.player.sendMessage(state.toString())
     }
 }
