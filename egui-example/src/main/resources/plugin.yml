@@ -1,0 +1,8 @@
+name: ExamplePlugin
+version: @project.version@
+main: me.elsiff.egui.example.ExamplePlugin
+api-version: 1.13
+commands:
+  egui:
+    description: A test command for egui
+    usage: /egui <gui>
