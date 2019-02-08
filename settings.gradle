@@ -1,2 +1,2 @@
 rootProject.name = 'egui'
-
+include 'egui-core', 'egui-example'
