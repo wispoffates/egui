@@ -11,7 +11,7 @@ abstract class ChestInventoryGui(
     val height: Int,
     val title: String
 ) : InventoryGui() {
-    override val inventory: Inventory = server.createInventory(null, height * WIDTH, title)!!
+    override val inventory: Inventory = server.createInventory(null, height * WIDTH, title)
     override val slots: List<Int>
         get() = (0 until inventory.size).toList()
     protected val minX = 0

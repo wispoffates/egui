@@ -14,7 +14,7 @@ object ItemDeliverer {
         inventory: Inventory,
         destinationSlots: List<Int> = (0 until inventory.size).toList()
     ) {
-        val contents = destinationSlots.mapNotNull { slot -> inventory.getItem(slot) ?: null }
+        val contents = destinationSlots.mapNotNull { slot -> inventory.getItem(slot)}
         for (invItem in contents.filter { it.isSimilar(delivery) }) {
             val givingAmount = min(delivery.amount, invItem.maxStackSize - invItem.amount)
             invItem.amount = invItem.amount + givingAmount

@@ -8,7 +8,6 @@ import me.elsiff.egui.state.GuiItemChangeState
 import org.bukkit.Material
 import org.bukkit.Server
 import org.bukkit.inventory.ItemStack
-import org.bukkit.inventory.meta.ItemMeta
 
 /**
  * Created by elsiff on 2019-02-08.
@@ -17,10 +16,8 @@ class ContainerGui(
     server: Server
 ) : ChestInventoryGui(server, 6, "Container Gui") {
     init {
-        val icon = ItemStack(Material.LIGHT_BLUE_STAINED_GLASS_PANE)
-        icon.edit<ItemMeta> {
-            displayName = " "
-        }
+        var icon = ItemStack(Material.LIGHT_BLUE_STAINED_GLASS_PANE)
+        icon.itemMeta?.setDisplayName("");
         for (slot in slotsOf(0..8, 5)) {
             inventory.setItem(slot, icon)
         }

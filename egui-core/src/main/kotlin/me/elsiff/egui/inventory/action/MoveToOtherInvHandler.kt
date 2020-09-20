@@ -25,7 +25,7 @@ class MoveToOtherInvHandler : InventoryActionHandler {
             }
         } else if (event.clickedInventory == bottomInv) {
             event.isCancelled = true
-            ItemDeliverer.deliver(event.currentItem, topInv, gui.controllableSlots())
+            event.currentItem?.let { ItemDeliverer.deliver(it, topInv, gui.controllableSlots()) }
             gui.handleItemChange(GuiItemChangeState.of(event))
         }
     }

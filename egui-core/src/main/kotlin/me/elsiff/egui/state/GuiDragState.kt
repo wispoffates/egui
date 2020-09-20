@@ -20,7 +20,7 @@ data class GuiDragState(
         fun of(event: InventoryDragEvent): GuiDragState {
             return GuiDragState(
                 player = event.whoClicked as Player,
-                cursor = event.cursor ?: null,
+                cursor = event.cursor!!,
                 slots = event.rawSlots,
                 newItems = event.newItems,
                 oldCursor = event.oldCursor,

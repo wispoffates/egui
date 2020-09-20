@@ -32,7 +32,7 @@ class GuiRegistry(
 
     fun unregister(gui: Gui) {
         _guis.remove(gui)
-        HandlerList.unregisterAll(listeners[gui])
+        listeners[gui]?.let { HandlerList.unregisterAll(it) }
         listeners.remove(gui)
     }
 

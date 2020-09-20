@@ -20,7 +20,7 @@ data class ComponentClickState(
         fun of(event: InventoryClickEvent): ComponentClickState {
             return ComponentClickState(
                 player = event.whoClicked as Player,
-                cursor = event.cursor ?: null,
+                cursor = event.cursor!!,
                 slot = event.rawSlot,
                 slotType = event.slotType,
                 clickType = event.click

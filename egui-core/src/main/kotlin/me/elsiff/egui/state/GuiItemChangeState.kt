@@ -20,7 +20,7 @@ data class GuiItemChangeState(
         fun of(event: InventoryClickEvent): GuiItemChangeState {
             return GuiItemChangeState(
                 player = event.whoClicked as Player,
-                cursor = event.cursor ?: null,
+                cursor = event.cursor!!,
                 slot = event.rawSlot,
                 slotType = event.slotType,
                 clickType = event.click
